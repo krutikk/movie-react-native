@@ -29,7 +29,7 @@ const Search = () => {
         <View className="flex-1 bg-primary">
             {
                 (
-                    <View className="flex-1 mt-5">
+                    <View className="flex-1 mt-5  px-5">
                         <>
 
                             <FlatList data={movies}
@@ -44,7 +44,7 @@ const Search = () => {
                                       }
                                       ListEmptyComponent = {
                                           !moviesLoading && !moviesError ? (
-                                              <View className="mt-10 px-5">
+                                              <View className="mt-10 px-5 mb-5">
                                                   <Text className="text-center text-gray-500">
                                                       {searchQuery.trim()
                                                           ? "No movies found"
@@ -81,7 +81,7 @@ const Search = () => {
                                                   !moviesError &&
                                                   searchQuery.trim() &&
                                                   movies?.length! > 0 && (
-                                                      <Text className="text-xl text-white font-bold">
+                                                      <Text className="text-xl text-white font-bold mb-5">
                                                           Search Results for{" "}
                                                           <Text className="text-accent">{searchQuery}</Text>
                                                       </Text>
