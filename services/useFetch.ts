@@ -30,6 +30,6 @@ const  useFetch = <T>(fetchFunction : ()=> Promise<T>, autoFatch=true) => {
         }
     },[])
 
-    return {data,loading,error, reset, fetchData};
+    return {data,loading,error, refetch: fetchData,reset};
 }
 export default useFetch;
